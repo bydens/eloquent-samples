@@ -1,18 +1,19 @@
-var row = 8, collumn = 8, result = '#', count = 1;
+var row = 8, collumn = 8, result = '', count = 1, mark = '.';
 
-for (var i = 2; i <= row * collumn; i++) {
-  if (i % 2 == 0) {
-    result += '.';
+for (var i = 1; i <= collumn; i++) {
+  for (var j = 1; j <= row; j++) {
+    if (mark == '.') {
+      mark = '#';
+    } else {
+      mark = '.';
+    }
+    result += mark;
+  }
+  result += '\n';
+  if (mark == '.') {
+    mark = '#';
   } else {
-    result += '#';
-  }
-  count++;
-  if (count == row) {
-    result += '\n';
-    count = 0;
-  }
-  if (i % row == 0 && i % (2 * row) != 0) {
-    result += '.';
+    mark = '.';
   }
 }
 

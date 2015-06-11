@@ -1,33 +1,29 @@
-function deepEqual(data1, data2) {
-  if (data1 && data2) {
-    if (typeof(data1) === 'object' && typeof(data2) === 'object') {
-      for (var val1 in data1) {
-        for (var val2 in data2) {
-          if (typeof(data1[val1]) === 'object' && typeof(data2[val2]) === 'object') {
-            deepEqual(data1[val1], data2[val2]);
-console.log(typeof(data2[val2]), typeof(data1[val1]));
-console.log(data2[val2], data1[val1]);
-          }
-          if (val2 === val1 && data2[val2] == data1[val1]) {
-console.log(val1 + " = " + data1[val1], val2 + " = " + data2[val2]);
-            return true;
-          } else {
-            return false;
-          }
-        }
-      }
-    } else {
-      if (data1 === data2) return true;
-      else return false;
-    }
-  } else {
-    return 'Data not null';
+function deepEqual(a, b) {
+  if (a === b) return true;
+  
+  if (a === null || typeof a != "object" ||
+      b === null || typeof b != "object")
+    return false;
+  
+  var propsInA = 0, propsInB = 0;
+
+  for (var prop in a)
+    propsInA += 1;
+
+  for (var prop in b) {
+    propsInB += 1;
+    if (!(prop in a) || !deepEqual(a[prop], b[prop]))
+      return false;
   }
+
+  return propsInA == propsInB;
 }
 
+
 var obj = {here: {is: "an"}, object: 2};
-var obj1 = {a: 3, b : 'as'};
-// console.log(typeof(obj));
-// console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
-// console.log(deepEqual(obj1, {a: 3, b : 'as'}));
+// → true

@@ -3,10 +3,10 @@
 #How to run it?
 Objects "Vector" and "Greed" - that generates a coordinate space.
 The object "World" - draws the map
-Object LifelikeWorld" - is responsible for displaying living creatures.
-Object "actionTypes" - is responsible for the Commission of activism (food, movement, reproduction).
-Object "Plant" is a plant.
-Object SmartPlantEater" - herbivore.
+The object LifelikeWorld" - is responsible for displaying living creatures.
+The object "actionTypes" - is responsible for the Commission of activism (food, movement, reproduction).
+The object "Plant" is a plant.
+The object SmartPlantEater" - herbivore.
 The object of the "Predator" is a predator.
 
 

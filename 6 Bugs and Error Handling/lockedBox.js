@@ -18,9 +18,9 @@ function withBoxUnlocked(body) {
   }
   catch (e) {
 
-  } finally {
+  } //finally {
     box.lock();
-  } 
+  //} 
 }
 
 withBoxUnlocked(function() {

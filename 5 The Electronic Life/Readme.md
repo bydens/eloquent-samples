@@ -1,13 +1,13 @@
 ##Electronic Life
 
 #How to run it?
-  *Objects "Vector" and "Greed" - that generates a coordinate space.
-  *The object "World" - draws the map
-  *The object LifelikeWorld" - is responsible for displaying living creatures.
-  *The object "actionTypes" - is responsible for the Commission of activism (food, movement, reproduction).
-  *The object "Plant" is a plant.
-  *The object SmartPlantEater" - herbivore.
-  *The object of the "Predator" is a predator.
+  * Objects "Vector" and "Greed" - that generates a coordinate space.
+  * The object "World" - draws the map
+  * The object LifelikeWorld" - is responsible for displaying living creatures.
+  * The object "actionTypes" - is responsible for the Commission of activism (food, movement, reproduction).
+  * The object "Plant" is a plant.
+  * The object SmartPlantEater" - herbivore.
+  * The object of the "Predator" is a predator.
 
 
 #What each symbol on a plan means?
